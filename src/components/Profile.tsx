@@ -1,16 +1,16 @@
 import React from "react";
-
+import classes from "./Profile.module.css";
 
 export const Profile = () => {
     return (
-        <div className="content">
+        <div className={classes.content}>
             <div>
                 <img src="https://bipbap.ru/wp-content/uploads/2017/04/0_7c779_5df17311_orig.jpg" alt="Beach."/>
             </div>
             <div>
                 ava + description
                 <img
-                    src="https://avatars.mds.yandex.net/i?id=2a0000017a11da9cb45d4eb598fc5967415f-4576345-images-thumbs&n=13"
+                    // src="https://avatars.mds.yandex.net/i?id=2a0000017a11da9cb45d4eb598fc5967415f-4576345-images-thumbs&n=13"
                     alt="Fermer."/>
             </div>
             <div>
@@ -18,11 +18,11 @@ export const Profile = () => {
                 <div>
                     new post
                 </div>
-                <div>
-                    <div>
+                <div className={classes.post}>
+                    <div className={classes.item}>
                         post 1
                     </div>
-                    <div>
+                    <div className={classes.item}>
                         post 2
                     </div>
                 </div>
