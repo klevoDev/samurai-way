@@ -1,12 +1,24 @@
 .nav {
     grid-area: n;
     background-color: azure;
+    padding: 20px;
 }
 
 .item {
-    color: cadetblue;
+    margin-bottom: 20px;
 }
 
-.active {
-    color: coral;
+.item a{
+    text-decoration: none;
+    color: darkcyan;
+
 }
+
+.item a:hover {
+    color: darkcyan;
+}
+
+.active  {
+    color: brown !important;
+}
+

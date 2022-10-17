@@ -6,29 +6,30 @@ import {NavBar} from "./components/NavBar/NavBar";
 import {Profile} from "./components/Profile/Profile";
 import {Dialogs} from "./components/Dialogs/Dialogs";
 import {News} from "./components/News/News";
-import {Route, createBrowserRouter, createRoutesFromElements, RouterProvider, Outlet} from "react-router-dom";
+import {Setting} from "./components/Setting/Setting";
+import {Music} from "./components/Music/Music";
+import {Route, BrowserRouter, Routes} from "react-router-dom";
 
 
-const router = createBrowserRouter(
-    createRoutesFromElements(
-        <Route >
-            <Route path="/profile" element={<Profile/>}/>
-            <Route path="/dialogs" element={<Dialogs/>}/>
-            <Route path="/news" element={<News/>}/>
-        </Route>
-    )
-);
 
 function App() {
+
     return (
+        <BrowserRouter>
             <div className="app-wrapper">
                 <Header/>
                 <NavBar />
                 <div className='app-wrapper-content'>
-                    <RouterProvider router={router} />
-                    <Outlet />
+                   <Routes>
+                        <Route path="profile" element={<Profile/>}/>
+                        <Route path="dialogs" element={<Dialogs/>}/>
+                        <Route path="news" element={<News/>}/>
+                        <Route path="setting" element={<Setting/>}/>
+                        <Route path="music" element={<Music/>}/>
+                   </Routes>
                 </div>
             </div>
+        </BrowserRouter>
     );
 }
 
