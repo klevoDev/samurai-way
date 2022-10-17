@@ -10,9 +10,9 @@ export const Profile = () => {
             </div>
             <div>
                 ava + description
-                {/*<img className={classes.item}*/}
-                {/*    src="https://avatars.mds.yandex.net/i?id=2a0000017a11da9cb45d4eb598fc5967415f-4576345-images-thumbs&n=13"*/}
-                {/*    alt="Fermer."/>*/}
+                <img className={classes.item}
+                    src="https://avatars.mds.yandex.net/i?id=2a0000017a11da9cb45d4eb598fc5967415f-4576345-images-thumbs&n=13"
+                    alt="Fermer."/>
             </div>
            <MyPosts/>
         </div>

@@ -6,19 +6,19 @@ export const NavBar =()=>{
     return (
         <nav className={classes.nav}>
             <div >
-                <a className={classes.item} href="src/components/NavBar/NavBar">Profile</a>
+                <a className={classes.item} href="/profile">Profile</a>
             </div>
             <div >
-                <a className={`${classes.item} ${classes.active}`} href="src/components/NavBar/NavBar">Messages</a>
+                <a className={`${classes.item} ${classes.active}`} href="/dialogs">Messages</a>
             </div>
             <div >
-                <a className={classes.item} href="src/components/NavBar/NavBar">News</a>
+                <a className={classes.item} href="/news">News</a>
             </div>
             <div >
-                <a className={classes.item} href="src/components/NavBar/NavBar">Music</a>
+                <a className={classes.item} href="music">Music</a>
             </div>
             <div >
-                <a className={classes.item} href="src/components/NavBar/NavBar">Setting</a>
+                <a className={classes.item} href="setting">Setting</a>
             </div>
         </nav>
     )
