@@ -1,5 +1,7 @@
 import React from "react";
 import classes from './Dialogs.module.css';
+import {DialogItem} from "./Dialog/DialogItem";
+import {Message} from "./Dialog/Message/Message";
 
 
 export const Dialogs = () => {
@@ -7,32 +9,17 @@ export const Dialogs = () => {
         <div className={classes.dialogs}>
             {/*<h1>Dialog</h1>*/}
             <div className={classes.dialogsItems}>
-                <div className={classes.dialog + ' ' + classes.active}>
-                    Dima
-                </div>
-                <div className={classes.dialog}>
-                    Max
-                </div>
-                <div className={classes.dialog}>
-                    Polina
-                </div>
-                <div className={classes.dialog}>
-                    Miron
-                </div>
-                <div className={classes.dialog}>
-                    Volodya
-                </div>
+                <DialogItem name={'Dimich'} id={'1'}/>
+                <DialogItem name={'Miron'} id={'2'}/>
+                <DialogItem name={'Max'} id={'3'}/>
+                <DialogItem name={'Polina'} id={'4'}/>
+                <DialogItem name={'Volodya'} id={'5'}/>
+                <DialogItem name={'Inna'} id={'6'}/>
             </div>
             <div className={classes.messages}>
-                <div className={classes.message}>
-                    Hi
-                </div>
-                <div className={classes.message}>
-                    how are you?
-                </div>
-                <div className={classes.message}>
-                    was the lesson great yesterday, did you do your homework?
-                </div>
+                <Message text={'Hi :)'} />
+                <Message text={'How are you?'} />
+                <Message text={'Was the lesson great yesterday, did you do your homework?'} />
             </div>
         </div>
     )

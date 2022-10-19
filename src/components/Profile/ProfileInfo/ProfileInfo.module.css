@@ -1,0 +1,12 @@
+.background {
+    object-fit: cover;
+    width: 100%
+}
+
+.item img {
+    width: 50px;
+}
+
+.descriptionBlock {
+    padding: 10px;
+}
