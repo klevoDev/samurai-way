@@ -9,28 +9,36 @@ import {News} from "./components/News/News";
 import {Setting} from "./components/Setting/Setting";
 import {Music} from "./components/Music/Music";
 import {Route, BrowserRouter, Routes} from "react-router-dom";
+import {RootStateType} from "./redux/state";
 
 
+type AppPropsType = {
+    state: RootStateType
+}
 
-function App() {
+function App(props: AppPropsType) {
+    console.log(props)
+    let messages = props.state.dialogs.messages
+    let dialogs = props.state.dialogs.dialog
+    let posts = props.state.profile.posts
 
-    return (
-        <BrowserRouter>
-            <div className="app-wrapper">
-                <Header/>
-                <NavBar />
-                <div className='app-wrapper-content'>
-                   <Routes>
-                        <Route path="profile" element={<Profile/>}/>
-                        <Route path="dialogs/*" element={<Dialogs />}/>
-                        <Route path="news" element={<News/>}/>
-                        <Route path="setting" element={<Setting/>}/>
-                        <Route path="music" element={<Music/>}/>
-                   </Routes>
+        return (
+            <BrowserRouter>
+                <div className="app-wrapper">
+                    <Header/>
+                    <NavBar />
+                    <div className='app-wrapper-content'>
+                       <Routes>
+                            <Route path="profile" element={<Profile posts={posts}/>}/>
+                            <Route path="dialogs/*" element={<Dialogs messages={messages} dialogs={dialogs}/>}/>
+                            <Route path="news" element={<News/>}/>
+                            <Route path="setting" element={<Setting/>}/>
+                            <Route path="music" element={<Music/>}/>
+                       </Routes>
+                    </div>
                 </div>
-            </div>
-        </BrowserRouter>
-    );
+            </BrowserRouter>
+        );
 }
 
 export default App;

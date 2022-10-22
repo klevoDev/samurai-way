@@ -1,12 +1,18 @@
 import React from "react";
 import {MyPosts} from "./MyPosts/MyPosts";
 import {ProfileInfo} from "./ProfileInfo/ProfileInfo";
+import {PostType} from "../../redux/state";
 
-export const Profile = () => {
+type ProfileType = {
+    posts: Array<PostType>
+}
+
+export const Profile = (props: ProfileType) => {
+
     return (
-        <div >
+        <div>
             <ProfileInfo/>
-           <MyPosts/>
+            <MyPosts post={props.posts}/>
         </div>
     )
 }
