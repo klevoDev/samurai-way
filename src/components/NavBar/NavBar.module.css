@@ -2,6 +2,7 @@
     grid-area: n;
     background-color: azure;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .item {
@@ -11,7 +12,11 @@
 .item a{
     text-decoration: none;
     color: darkcyan;
+    font-size: 20px;
+}
 
+.item:last-child {
+    padding-top: 30px;
 }
 
 .item a:hover {

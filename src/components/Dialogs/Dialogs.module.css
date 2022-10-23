@@ -8,13 +8,12 @@
 }
 
 .dialogsItems .dialog {
-
+    padding-bottom: 40px;
 }
 
 .dialogsItems .active {
     color: brown;
 }
-
 
 .messages {
     padding: 10px;
@@ -24,3 +23,14 @@
 
 }
 
+.avatar {
+    padding-right: 20px;
+}
+
+.textArea {
+
+}
+
+.messageBlock {
+    padding-bottom: 20px;
+}

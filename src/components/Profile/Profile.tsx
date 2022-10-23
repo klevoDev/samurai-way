@@ -12,7 +12,7 @@ export const Profile = (props: ProfileType) => {
     return (
         <div>
             <ProfileInfo/>
-            <MyPosts post={props.posts}/>
+            <MyPosts post={props.posts} />
         </div>
     )
 }

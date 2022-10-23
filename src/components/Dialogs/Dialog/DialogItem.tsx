@@ -12,6 +12,7 @@ export const DialogItem = (props: DialogItemProps) => {
     return (
         <div className={classes.dialog + ' ' + classes.active}>
             <NavLink to={path}>
+                <img className={classes.avatar} src="" alt="Users foto."/>
                 {props.name}
             </NavLink>
         </div>

@@ -32,6 +32,11 @@ export const NavBar = () => {
                         Setting
                     </NavLink>
                 </div>
+                <div className={classes.item}>
+                    <NavLink to="best" className={({ isActive }) => (isActive ? classes.active : '')}>
+                        Best Friends
+                    </NavLink>
+                </div>
         </nav>
     )
 };

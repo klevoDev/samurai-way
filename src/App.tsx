@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {Header} from "./components/Header/Header";
 import {NavBar} from "./components/NavBar/NavBar";
@@ -8,9 +7,9 @@ import {Dialogs} from "./components/Dialogs/Dialogs";
 import {News} from "./components/News/News";
 import {Setting} from "./components/Setting/Setting";
 import {Music} from "./components/Music/Music";
+import {Best} from "./components/bestFriends/Best";
 import {Route, BrowserRouter, Routes} from "react-router-dom";
-import {RootStateType} from "./redux/state";
-
+import {addPost, RootStateType} from "./redux/state";
 
 type AppPropsType = {
     state: RootStateType
@@ -29,11 +28,12 @@ function App(props: AppPropsType) {
                     <NavBar />
                     <div className='app-wrapper-content'>
                        <Routes>
-                            <Route path="profile" element={<Profile posts={posts}/>}/>
+                            <Route path="profile" element={<Profile posts={posts} />}/>
                             <Route path="dialogs/*" element={<Dialogs messages={messages} dialogs={dialogs}/>}/>
                             <Route path="news" element={<News/>}/>
                             <Route path="setting" element={<Setting/>}/>
                             <Route path="music" element={<Music/>}/>
+                            <Route path="best" element={<Best/>}/>
                        </Routes>
                     </div>
                 </div>

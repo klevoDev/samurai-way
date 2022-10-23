@@ -28,7 +28,7 @@ export type RootStateType = {
     dialogs: DialogsType
 }
 
-let state: RootStateType = {
+export let state: RootStateType = {
     profile: {
         posts: [
             {id: 1, message: 'Hi :)', likesCount: 12},
@@ -52,4 +52,11 @@ let state: RootStateType = {
     },
 }
 
-export default state
+export let addPost = () => {
+    let newPost = {
+        id: 5,
+        message: postMessage,
+        likesCount: 0,
+    }
+    state.profile.posts.push()
+}

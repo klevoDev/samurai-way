@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+
+.logo {
+    padding: 5px 0 0 15px;
+    font-size: 40px;
+    font-family: 'Fredoka One', cursive;
+    color: steelblue;
+}
