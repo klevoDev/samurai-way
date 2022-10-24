@@ -9,7 +9,7 @@ import {Setting} from "./components/Setting/Setting";
 import {Music} from "./components/Music/Music";
 import {Best} from "./components/bestFriends/Best";
 import {Route, BrowserRouter, Routes} from "react-router-dom";
-import {addPost, RootStateType} from "./redux/state";
+import { RootStateType} from "./redux/state";
 
 type AppPropsType = {
     state: RootStateType
@@ -20,6 +20,7 @@ function App(props: AppPropsType) {
     let messages = props.state.dialogs.messages
     let dialogs = props.state.dialogs.dialog
     let posts = props.state.profile.posts
+    let news = props.state.news
 
         return (
             <BrowserRouter>
@@ -30,7 +31,7 @@ function App(props: AppPropsType) {
                        <Routes>
                             <Route path="profile" element={<Profile posts={posts} />}/>
                             <Route path="dialogs/*" element={<Dialogs messages={messages} dialogs={dialogs}/>}/>
-                            <Route path="news" element={<News/>}/>
+                            <Route path="news" element={<News newsItem={news}/>}/>
                             <Route path="setting" element={<Setting/>}/>
                             <Route path="music" element={<Music/>}/>
                             <Route path="best" element={<Best/>}/>
