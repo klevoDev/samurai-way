@@ -22,3 +22,12 @@
 .text {
     padding-left: 20px;
 }
+
+.link {
+    text-decoration: none;
+    color: steelblue;
+}
+
+.link:hover {
+    color: lightsteelblue;
+}

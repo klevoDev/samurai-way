@@ -37,7 +37,7 @@ export type RootStateType = {
     news: Array<NewsType>
 }
 
-export let state: RootStateType = {
+export let  state: RootStateType = {
     profile: {
         posts: [
             {id: 1, message: 'Hi :)', likesCount: 12},
@@ -81,13 +81,14 @@ export let state: RootStateType = {
             {id: 3, message: 'Was the lesson great yesterday, did you do your homework?'},
         ],
     },
-}
+};
 
-export let addPost = () => {
+
+export function addPost(postMessage: string) {
     let newPost = {
-        id: 5,
+        id: 4,
         message: postMessage,
         likesCount: 0,
     }
-    state.profile.posts.push()
+    state.profile.posts.push(newPost)
 }
